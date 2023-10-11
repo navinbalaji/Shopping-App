@@ -8,8 +8,8 @@
 
 ### Architecture
 
-![Architecture](./Architecture.png)
+![Architecture](./CDN/1.jpg)
 
 ### Postman Results
 
-![Postman Results](./sample-postman-test.png)
+![Postman Results](./CDN/2.jpg)
