@@ -1,6 +1,10 @@
 import express from "express";
 import "dotenv/config";
 import { cartModuleRouter } from "./routes/AddToCart.js";
+import { orderModuleRouter } from "./routes/Orders.js";
+import { discountModuleRouter } from "./routes/Discount.js";
+import { itemModuleRouter } from "./routes/Items.js";
+import { userModuleRouter } from "./routes/User.js";
 
 const shoppingApp = express();
 
@@ -18,7 +22,11 @@ shoppingApp.use("/ping", (req, res) => res.send("pong"));
  * Import routes
  */
 
-shoppingApp.use("/api", cartModuleRouter);
+shoppingApp.use("/api/cart", cartModuleRouter);
+shoppingApp.use("/api/order", orderModuleRouter);
+shoppingApp.use("/api/discount", discountModuleRouter);
+shoppingApp.use("/api/item", itemModuleRouter);
+shoppingApp.use("/api/user", userModuleRouter);
 
 /**
  *

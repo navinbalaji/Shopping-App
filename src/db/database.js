@@ -1,4 +1,7 @@
-export const ITEMS = [
+export const ORDER_THRESHOULD = 2;
+export const ORDER_DISCOUNT_VALUE = 10;
+
+export let ITEMS = [
   {
     itemId: 1,
     item: 1,
@@ -24,5 +27,6 @@ export const ITEMS = [
     price: 40,
   },
 ];
-export const SHOPPING_CART = [];
-export const ORDERS = [];
+export let SHOPPING_CART = [];
+export let ORDERS = [];
+export let DISCOUNT=[]
