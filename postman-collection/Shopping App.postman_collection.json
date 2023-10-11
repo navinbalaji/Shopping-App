@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "97065597-c771-4ffc-a93c-81abf5ded18b",
+		"name": "Shopping App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18008141"
+	},
+	"item": [
+		{
+			"name": "Ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/ping",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add To Cart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": 1,\n    \"items\": [\n        {\n            \"itemId\": 1,\n            \"quantity\": 2\n        },\n        {\n            \"itemId\": 2,\n            \"quantity\": 1\n        }\n    ],\n    \"discountCode\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/cart/add-to-cart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"cart",
+						"add-to-cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/order/orders?userId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"order",
+						"orders"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/order/all-orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"order",
+						"all-orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Order By Order Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/order/orders?orderId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"order",
+						"orders"
+					],
+					"query": [
+						{
+							"key": "orderId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Discounts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/discount/all-discount",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"discount",
+						"all-discount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/item/all-items",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"item",
+						"all-items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/user/user-shopping-data?userId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"user",
+						"user-shopping-data"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
